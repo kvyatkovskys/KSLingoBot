@@ -33,7 +33,7 @@ DATABASES = {
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 
-ALLOWED_HOSTS = ['airbot-kviatkovskii.herokuapp.com']
+ALLOWED_HOSTS = ['https://airbot-kviatkovskii.herokuapp.com/']
 
 
 # Application definition
