@@ -1,0 +1,1 @@
+web: gunicorn airsbot.wsgi --log-file -
