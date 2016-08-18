@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,11 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_ktn=57su^^w#o%709^sqoz@6a#*ys)(hjcz$49bi09kfhi9v7'
+SECRET_KEY = 'SECRET_KEY'
 DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('postgres://zvqpkisorkikam:5zAlLG2sBU7Qp0fyjwoQtNEhRS@ec2-54-243-50-185.compute-1.amazonaws.com:5432/ddcs1lqgn3mq55')
+        default=config('DATABASE_URL')
     )
 }
 
